@@ -619,7 +619,7 @@ $d = $(document);
  
   
    
-   $d.on("click", "#coba", function () {   alert('gbr')
+   $d.on("click", "#coba", function () {   
     f.empty();
     var c = Math.min(600, $("#ic-main").width());
     b = new ImageCropper(f, c, c);
