@@ -989,7 +989,8 @@ $d = $(document);
       c = URL.createObjectURL(c);
     }
     this.href = c;
-    this.download = a = (d ? d.name.split(".")[0] + "_cropped" : "cropped_image") + ("image/png" === a ? ".png" : ".jpg");
+    //this.download = a = (d ? d.name.split(".")[0] + "_cropped" : "cropped_image") + ("image/png" === a ? ".png" : ".jpg");
+this.download=namafile+".jpg";
   });
   $d.on("click", "#ic-rotate-btn", function () {
     b && b.rotateClockwise();
