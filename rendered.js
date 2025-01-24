@@ -683,7 +683,7 @@ reader.readAsDataURL(c);
 reader.onloadend = function() {
         
 alert(reader.result)
-    }
+    }}
    
 	
   });
