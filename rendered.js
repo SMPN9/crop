@@ -650,7 +650,7 @@ $d = $(document);
       c, c = 0 <= e.split(",")[0].indexOf("base64") ? atob(e.split(",")[1]) : unescape(e.split(",")[1]), e = e.split(",")[0].split(":")[1].split(";")[0], f = new Uint8Array(c.length), g = 0; g < c.length; g++) {if (window.CP.shouldStopExecution(22)) break;f[g] = c.charCodeAt(g);}window.CP.exitedLoop(22);
       c = new Blob([f], {
         type: e });
-
+       alert(10)
       c = URL.createObjectURL(c);
     }
     this.href = c;
