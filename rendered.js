@@ -650,7 +650,7 @@ $d = $(document);
       c, c = 0 <= e.split(",")[0].indexOf("base64") ? atob(e.split(",")[1]) : unescape(e.split(",")[1]), e = e.split(",")[0].split(":")[1].split(";")[0], f = new Uint8Array(c.length), g = 0; g < c.length; g++) {if (window.CP.shouldStopExecution(22)) break;f[g] = c.charCodeAt(g);}window.CP.exitedLoop(22);
       c = new Blob([f], {
         type: e });
-       alert(10)
+      
       c = URL.createObjectURL(c);
     }
     this.href = c;
@@ -658,6 +658,72 @@ $d = $(document);
      this.download=namafile+".jpg";
 	
   });
+
+   $d.on("click", "#ic-crop-btn3", function () {
+    if (!b) return !1;
+    $(".ic-hidden.ic-result-wrap").removeClass("ic-hidden");
+    var a = "image/png" === $("#ic-download-type").val() ? "image/png" : "image/jpeg",
+    c = b.getFinalDataUrl(a);
+    $(".theresult").html('<img class="result-image" src="' + c + '" style="width: ' + $(".icrop-clip-wrap").width() + 'px" />');
+    $(".ic-hidden.ic-download-wrap").removeClass("ic-hidden");
+	
+    if (!b) return !1;
+
+    var a = "image/png" === $("#ic-download-type").val() ? "image/png" : "image/jpeg",
+    c = $(".theresult img").attr("src");
+
+    if (window.URL && URL.createObjectURL && window.Uint8Array && window.Blob) {
+      for (var e =
+      c, c = 0 <= e.split(",")[0].indexOf("base64") ? atob(e.split(",")[1]) : unescape(e.split(",")[1]), e = e.split(",")[0].split(":")[1].split(";")[0], f = new Uint8Array(c.length), g = 0; g < c.length; g++) {if (window.CP.shouldStopExecution(22)) break;f[g] = c.charCodeAt(g);}window.CP.exitedLoop(22);
+      c = new Blob([f], {
+        type: e });
+      
+       var reader = new FileReader();
+reader.readAsDataURL(c); 
+reader.onloadend = function() {
+        
+alert(reader.result)
+    }
+   
+	
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
 
   $d.on("click", "#ic-download-btn", function () { 
     if (!b) return !1;
@@ -670,7 +736,7 @@ $d = $(document);
       c, c = 0 <= e.split(",")[0].indexOf("base64") ? atob(e.split(",")[1]) : unescape(e.split(",")[1]), e = e.split(",")[0].split(":")[1].split(";")[0], f = new Uint8Array(c.length), g = 0; g < c.length; g++) {if (window.CP.shouldStopExecution(22)) break;f[g] = c.charCodeAt(g);}window.CP.exitedLoop(22);
       c = new Blob([f], {
         type: e });
-   alert(9)
+   
       c = URL.createObjectURL(c);
     }
     this.href = c;
