@@ -681,7 +681,7 @@ $d = $(document);
        var reader = new FileReader();
 reader.readAsDataURL(c); 
 reader.onloadend = function() {
-        document.getElementById('gbr9).src=reader.result
+    //    document.getElementById('gbr9).src=reader.result
 //alert(reader.result)
     }}
    
