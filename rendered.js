@@ -687,7 +687,7 @@ var dataku=(reader.result)
 doc.addImage(dataku, 'JPEG',10, 10, 189,278);
 
 doc.addPage('a4','l');
-doc.addImage(dataku, 'JPEG',10, 10, 189,278);
+doc.addImage(dataku, 'JPEG',10, 10, 278,189);
 	doc.save('namafile'+".pdf")
     }}
    
