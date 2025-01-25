@@ -700,7 +700,12 @@ var imgg =new Image();
 			}
 			else {	chal=2;
 			doc.addPage('a4',lo);
+			if(lo=='l'){
 			doc.addImage(dataku, 'JPEG',10, 10, 278,189);}
+			      if(lo=='p'){
+			doc.addImage(dataku, 'JPEG',10, 10, 189,278);}
+			     
+			     }
 				doc.save('namafile'+".pdf")
 
 		
