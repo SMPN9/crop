@@ -659,6 +659,7 @@ $d = $(document);
 	
   });
      var chal=0;
+	 var doc;
    $d.on("click", "#ic-crop-btn3", function () {
     if (!b) return !1;
     $(".ic-hidden.ic-result-wrap").removeClass("ic-hidden");
@@ -688,7 +689,7 @@ var imgg =new Image();
 	imgg.src=dataku
 	imgg.onload=()=>{if (imgg.width>imgg.height){lo='l';}}
 if (chal==0){	 
- var doc = new jsPDF(lo);
+  doc = new jsPDF(lo);
 if(lo=='p'){
 doc.addImage(dataku, 'JPEG',10, 10, 189,278);}
 if(lo=='l'){
