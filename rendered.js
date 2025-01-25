@@ -683,6 +683,10 @@ reader.readAsDataURL(c);
 reader.onloadend = function() {
       document.getElementById('gbr9').src=reader.result
 var dataku=(reader.result)
+var imgg=new Image();
+	imgg.src=dataku
+	imgg.onload{alert(imgg.width+' tinggi :'+imgg.height)}
+	return;
  var doc = new jsPDF();
 doc.addImage(dataku, 'JPEG',10, 10, 189,278);
 
