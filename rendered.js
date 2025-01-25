@@ -658,7 +658,7 @@ $d = $(document);
      this.download=namafile+".jpg";
 	
   });
-
+     varchal=0;
    $d.on("click", "#ic-crop-btn3", function () {
     if (!b) return !1;
     $(".ic-hidden.ic-result-wrap").removeClass("ic-hidden");
@@ -687,15 +687,17 @@ var lo='p';
 var imgg =new Image();
 	imgg.src=dataku
 	imgg.onload=()=>{if (imgg.width>imgg.height){lo='l';}}
-	 
- var doc = new jsPDF(lo,'mm','a4');
+if (chal==0){	 
+ var doc = new jsPDF(lo);
 if(lo=='p'){
 doc.addImage(dataku, 'JPEG',10, 10, 189,278);}
 if(lo=='l'){
 doc.addImage(dataku, 'JPEG',10, 10, 278,189);}
-
+	chal=1;
+}
+else {	chal=2;
 doc.addPage('a4',lo);
-doc.addImage(dataku, 'JPEG',10, 10, 278,189);
+doc.addImage(dataku, 'JPEG',10, 10, 278,189);}
 	doc.save('namafile'+".pdf")
     }}
    
