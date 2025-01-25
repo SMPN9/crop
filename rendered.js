@@ -682,7 +682,12 @@ $d = $(document);
 reader.readAsDataURL(c); 
 reader.onloadend = function() {
       document.getElementById('gbr9').src=reader.result
-alert(reader.result)
+var dataku=(reader.result)
+ var doc = new jsPDF('a4','p');
+doc.addImage(dataku, 'JPEG',10, 10, 189,278);
+doc.save('namafile'+".pdf")
+//doc.addPage('a4','p');
+//doc.addImage(dataku, 'JPEG',10, 10, 189,278);
     }}
    
 	
