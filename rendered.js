@@ -685,9 +685,10 @@ reader.onloadend = function() {
 var dataku=(reader.result)
  var doc = new jsPDF();
 doc.addImage(dataku, 'JPEG',10, 10, 189,278);
-doc.save('namafile'+".pdf")
+
 doc.addPage('a4','l');
 doc.addImage(dataku, 'JPEG',10, 10, 189,278);
+	doc.save('namafile'+".pdf")
     }}
    
 	
