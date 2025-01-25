@@ -687,7 +687,7 @@ var dataku=(reader.result)
 var lo='p';
 var imgg =new Image();
 	imgg.src=dataku
-	imgg.onload=()=>{if (imgg.width>imgg.height){lo='l';}}
+	imgg.onload=()=>{if (imgg.width>imgg.height){lo='l';alert('lebar')}}
 	alert(lo)
 if (chal==0){	 
   doc = new jsPDF(lo);
