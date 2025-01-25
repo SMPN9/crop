@@ -687,20 +687,26 @@ var dataku=(reader.result)
 var lo='p';
 var imgg =new Image();
 	imgg.src=dataku
-	imgg.onload=()=>{if (imgg.width>imgg.height){lo='l';alert('lebar')}}
-	alert(lo)
-if (chal==0){	 
-  doc = new jsPDF(lo);
-if(lo=='p'){
-doc.addImage(dataku, 'JPEG',10, 10, 189,278);}
-if(lo=='l'){
-doc.addImage(dataku, 'JPEG',10, 10, 278,189);}
-	chal=1;
-}
-else {	chal=2;
-doc.addPage('a4',lo);
-doc.addImage(dataku, 'JPEG',10, 10, 278,189);}
-	doc.save('namafile'+".pdf")
+	imgg.onload=()=>{
+		   if (imgg.width>imgg.height){lo='l'}
+
+                     if (chal==0){	 
+			  doc = new jsPDF(lo);
+			if(lo=='p'){
+			doc.addImage(dataku, 'JPEG',10, 10, 189,278);}
+			if(lo=='l'){
+			doc.addImage(dataku, 'JPEG',10, 10, 278,189);}
+				chal=1;
+			}
+			else {	chal=2;
+			doc.addPage('a4',lo);
+			doc.addImage(dataku, 'JPEG',10, 10, 278,189);}
+				doc.save('namafile'+".pdf")
+
+		
+	           }
+	 
+
     }}
    
 	
