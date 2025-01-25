@@ -683,14 +683,18 @@ reader.readAsDataURL(c);
 reader.onloadend = function() {
       document.getElementById('gbr9').src=reader.result
 var dataku=(reader.result)
+var lo='p';
 var imgg =new Image();
 	imgg.src=dataku
-	imgg.onload=()=>{alert(imgg.width+' tinggi :'+imgg.height)}
-	return;
- var doc = new jsPDF();
-doc.addImage(dataku, 'JPEG',10, 10, 189,278);
+	imgg.onload=()=>{if (imgg.width>imgg.height){lo='l';}}
+	 
+ var doc = new jsPDF(lo,'mm','a4');
+if(lo=='p'){
+doc.addImage(dataku, 'JPEG',10, 10, 189,278);}
+if(lo=='l'){
+doc.addImage(dataku, 'JPEG',10, 10, 278,189);}
 
-doc.addPage('a4','l');
+doc.addPage('a4',lo);
 doc.addImage(dataku, 'JPEG',10, 10, 278,189);
 	doc.save('namafile'+".pdf")
     }}
