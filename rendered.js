@@ -658,7 +658,7 @@ $d = $(document);
      this.download=namafile+".jpg";
 	
   });
-     varchal=0;
+     var chal=0;
    $d.on("click", "#ic-crop-btn3", function () {
     if (!b) return !1;
     $(".ic-hidden.ic-result-wrap").removeClass("ic-hidden");
