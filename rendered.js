@@ -717,9 +717,12 @@ var imgg =new Image();
 	
   });
 
-
-
-
+ $d.on("click", "#ic-crop-btn5", function () {
+   doc.save('namafile'+".pdf")
+ }
+$d.on("click", "#ic-crop-btn6", function () {
+  chal=0;
+ }
 
 
 
