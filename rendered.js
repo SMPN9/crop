@@ -706,7 +706,7 @@ var imgg =new Image();
 			doc.addImage(dataku, 'JPEG',10, 10, 189,278);}
 			     
 			     }
-				doc.save('namafile'+".pdf")
+				//doc.save('namafile'+".pdf")
 
 		
 	           }
